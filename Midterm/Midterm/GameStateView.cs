@@ -31,11 +31,6 @@ namespace Midterm
         }
         public abstract void RegisterCommands();
 
-        public virtual void ReregisterCommands(Keys[] newKeys)
-        {
-
-        }
-
         protected void Nothing(GameTime gameTime, float value) { }
         public abstract void LoadContent(ContentManager contentManager);
         public abstract void ProcessInput(GameTime gameTime);

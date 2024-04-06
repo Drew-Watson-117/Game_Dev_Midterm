@@ -28,6 +28,7 @@ namespace Midterm
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             Rectangle r = new Rectangle(0, 0, 0, 0);
             foreach (ParticleEffect particleEffect in m_system.GetParticleEffects())
             {
@@ -51,6 +52,7 @@ namespace Midterm
                         0);
                 }
             }
+            spriteBatch.End();
         }
     }
 }

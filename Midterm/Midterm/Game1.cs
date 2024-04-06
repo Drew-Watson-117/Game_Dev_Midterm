@@ -46,6 +46,7 @@ namespace Midterm
             m_stateDict = new Dictionary<GameStateEnum, IGameState>()
             {
                 { GameStateEnum.Menu, menu },
+                { GameStateEnum.Level1, new Level1(GameStateEnum.Level1) },
             };
         }
 

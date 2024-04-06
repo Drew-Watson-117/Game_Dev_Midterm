@@ -29,7 +29,7 @@ namespace Midterm
         private Timer m_flashTimer;
         public ControlsView(MenuStateEnum myState, Color titleColor, Color menuColor, Color selectedColor) : base(myState, titleColor, menuColor, selectedColor)
         {
-            m_controlsPersister = new ControlsPersister("gameControls.json");
+            m_controlsPersister = new ControlsPersister("realControls.json");
         }
 
         public override void Initialize(GraphicsDevice graphicsDevice, GraphicsDeviceManager graphics)

@@ -71,9 +71,11 @@ namespace Midterm
                     // TODO: CHANGE THE DISPLAY BASED ON THE CLASS MEMBERS OF SCORE
                     string displayString = " Rank: " + 
                         (m_highScores.Count - i).ToString() + 
-                        "\n   Level: " + m_highScores[i].Level + 
-                        "\n   Fuel: " + m_highScores[i].Fuel;
-                    m_spriteBatch.DrawString(roboto, displayString, new Vector2(m_graphics.PreferredBackBufferWidth / 2 - 100, 160 + (m_highScores.Count - 1 - i) * 60), m_menuColor);
+                        "\n   Score: " + m_highScores[i].Value + 
+                        "\n   Poles Caught: " + m_highScores[i].Poles +
+                        "\n   Date: " + m_highScores[i].TimeStamp;
+                    float yHeight = roboto.MeasureString(displayString).Y;
+                    m_spriteBatch.DrawString(roboto, displayString, new Vector2(m_graphics.PreferredBackBufferWidth / 2 - 100, 160 + (m_highScores.Count - 1 - i) * (yHeight+10)), m_menuColor);
                 }
             }
 

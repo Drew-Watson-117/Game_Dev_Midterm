@@ -45,14 +45,15 @@ namespace Midterm
             (string, MenuStateEnum)[] menuArray = new (string, MenuStateEnum)[]
             {
                 ("New Game", MenuStateEnum.NewGame),
-                ("Controls", MenuStateEnum.Controls),
+                //("Controls", MenuStateEnum.Controls),
                 ("High Scores", MenuStateEnum.HighScores),
-                ("Credits", MenuStateEnum.Credits)
+                ("Credits", MenuStateEnum.Credits),
+                ("Exit", MenuStateEnum.Exit)
             };
             m_stateDict = new Dictionary<MenuStateEnum, IMenuState>()
             {
-                { MenuStateEnum.MainMenu, new MainMenu(MenuStateEnum.MainMenu, MenuStateEnum.Exit, "GAME NAME", menuArray, m_titleColor, m_menuColor, m_selectedColor) },
-                { MenuStateEnum.Controls, new ControlsView(MenuStateEnum.Controls, m_titleColor, m_menuColor, m_selectedColor) },
+                { MenuStateEnum.MainMenu, new MainMenu(MenuStateEnum.MainMenu, MenuStateEnum.Exit, "Catch!", menuArray, m_titleColor, m_menuColor, m_selectedColor) },
+                //{ MenuStateEnum.Controls, new ControlsView(MenuStateEnum.Controls, m_titleColor, m_menuColor, m_selectedColor) },
                 { MenuStateEnum.HighScores, new HighScore(MenuStateEnum.HighScores, m_titleColor, m_menuColor) },
                 {MenuStateEnum.Credits, new Credits(MenuStateEnum.Credits, m_titleColor, m_menuColor) },
             };

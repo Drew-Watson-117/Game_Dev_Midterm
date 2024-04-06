@@ -21,12 +21,12 @@ namespace Lunar_Lander
         /// <summary>
         /// Overloaded constructor used to create an object for long term storage
         /// </summary>
-        /// <param name="fuel"></param>
-        /// <param name="level"></param>
-        public Score(float fuel, ushort level)
+        /// <param name="value"></param>
+        /// <param name="poles"></param>
+        public Score(long value, int poles)
         {
-            Fuel = fuel;
-            Level = level;
+            Value = value;
+            Poles = poles;
             TimeStamp = DateTime.Now;
 
             keys.Add(1, "one");
@@ -34,27 +34,23 @@ namespace Lunar_Lander
         }
 
         [DataMember()]
-        public float Fuel { get; set; }
+        public long Value { get; set; }
+
         [DataMember()]
-        public ushort Level { get; set; }
+        public int Poles { get; set; }
         [DataMember()]
         public DateTime TimeStamp { get; set; }
 
         [DataMember()]
         public Dictionary<int, string> keys = new Dictionary<int, string>();
 
+        
         public int CompareTo(Score other)
         {
             if (other == null) return 1;
             if (this == other) return 0;
-            // If the other score is from a higher level, it is a better score
-            if (Level < other.Level) return -1;
-            // If this score is from a higher level, it is a better score
-            else if (Level > other.Level) return 1;
-            // If this score has more fuel, it is a better score
-            else if (Fuel > other.Fuel) return 1;
-            else if (Fuel == other.Fuel) return 0;
-            else return -1;
+            // Higher score wins
+            return (int)(this.Value - other.Value);
         }
 
         // Define the is greater than operator.
