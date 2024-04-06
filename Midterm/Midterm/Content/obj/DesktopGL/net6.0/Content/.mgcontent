@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/background.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/catch.wav</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/closedHand.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/miss.wav</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/openHand.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/panel.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/particle.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/roboto.spritefont</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/rod.png</File>
+    <File>C:/Users/drewz/School_Stuff/Spring_2024/Game_Development/Homework/Midterm/Midterm/Midterm/Content/whiteRectangle.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

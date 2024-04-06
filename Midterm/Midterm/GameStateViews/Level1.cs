@@ -24,6 +24,7 @@ namespace Midterm
         int m_rodHeight = 100;
         int m_minHeight;
         float m_rodReduction = 0.9f;
+        bool m_rodPlayerCollision;
 
         int m_handSize = 80;
 
@@ -59,6 +60,7 @@ namespace Midterm
             m_rod = new Rod(new Vector2(440, 100), m_gravity, 10, m_rodHeight);
             m_droppingHand = new DroppingHand(new Vector2(400, 100), m_handSize, m_handSize, m_rod);
             m_playerHand = new PlayerHand(new Vector2(400, 500), m_handSize, m_handSize);
+            m_rodPlayerCollision = false;
 
             m_particleSystem = new ParticleSystem(new ParticleEffect[]
             {
@@ -74,6 +76,7 @@ namespace Midterm
             m_rod = new Rod(new Vector2(440, 100), m_gravity, 10, m_rodHeight);
             m_droppingHand = new DroppingHand(new Vector2(400, 100), m_handSize, m_handSize, m_rod);
             m_playerHand = new PlayerHand(new Vector2(400, 500), m_handSize, m_handSize);
+            m_rodPlayerCollision = false;
 
             m_particleSystem = new ParticleSystem(new ParticleEffect[]
             {
@@ -170,13 +173,14 @@ namespace Midterm
 
             m_droppingHand.Update(gameTime);
             m_rod.Update(gameTime);
+            if (m_rod.HasCollided(m_playerHand)) { m_rodPlayerCollision = true; }
             // Detecting if the player caught the rod
             if (m_rod.HasCollided(m_playerHand) && m_playerHand.IsClosed())
             {
                 m_rod.SetState(RodState.Caught);
             }
             // Detecting if the player missed the rod
-            else if (m_playerHand.IsClosed() && !m_rod.HasCollided(m_playerHand))
+            else if (m_playerHand.IsClosed() && !m_rod.HasCollided(m_playerHand) || m_rodPlayerCollision && !m_rod.HasCollided(m_playerHand))
             {
                 m_rod.SetState(RodState.Missed);
             }
